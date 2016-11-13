@@ -23,7 +23,7 @@ exports.handler = function(event, context) {
                 };
             }
 
-            if (result.status && result.status == 'error') {
+            if (result.error) {
                 context.fail(JSON.stringify(result));
             } else {
                 context.succeed(result);
